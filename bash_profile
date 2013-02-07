@@ -1,4 +1,4 @@
-pushd ~/Dotfiles
+pushd ~/Dotfiles > /dev/null
   source ./aliases
   source ./env
-popd
+popd > /dev/null
