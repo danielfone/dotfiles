@@ -1,4 +1,4 @@
-cd Dotfiles
-
-source ./aliases
-source ./env
+pushd Dotfiles
+  source ./aliases
+  source ./env
+popd
