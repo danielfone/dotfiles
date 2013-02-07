@@ -1,4 +1,4 @@
 dotfiles
 ========
 
-DIY.
+Ohhhhh... this is embarrassing.
