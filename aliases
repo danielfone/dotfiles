@@ -9,3 +9,4 @@ alias be="bundle exec"
 
 # General
 alias ls="ls -laGh"
+alias ll=ls
