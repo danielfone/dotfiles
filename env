@@ -1,0 +1,5 @@
+export EDITOR='/usr/bin/mate -w'
+export VISUAL='/usr/bin/mate -w'
+export HISTFILESIZE=5000
+export HISTSIZE=5000
+export PS1='$ '
