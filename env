@@ -2,8 +2,12 @@ export EDITOR='/usr/bin/mate -w'
 export VISUAL='/usr/bin/mate -w'
 
 # Bash history
-export HISTFILESIZE=5000
-export HISTSIZE=5000
+shopt -s histappend
+export HISTIGNORE="ls:ll:cd:pwd"
+export HISTFILESIZE=30000
+export HISTSIZE=30000
+export HISTCONTROL=ignoredups:erasedups
+export HISTTIMEFORMAT="[$(tput setaf 2)%F %T$(tput sgr0)]: "
 
 # Prompt
 export PS1='$ '
