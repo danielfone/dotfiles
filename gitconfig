@@ -1,0 +1,17 @@
+[user]
+	name = Daniel Fone
+	email = daniel@fone.net.nz
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[merge]
+	tool = opendiff
+[github]
+	user = danielfone
+[core]
+	excludesfile = /Users/danielfone/.gitignore_global
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple
