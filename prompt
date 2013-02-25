@@ -1,0 +1,9 @@
+function parse_git_branch {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "("${ref#refs/heads/}")"
+}
+
+GREEN="\[\033[0;32m\]"
+BLACK="\[\033[0;0m\]"
+
+PS1="\$(date +%H:%M) \w$GREEN \$(parse_git_branch)$BLACK\$ "

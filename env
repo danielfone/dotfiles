@@ -10,7 +10,7 @@ export HISTCONTROL=ignoredups:erasedups
 export HISTTIMEFORMAT="[$(tput setaf 2)%F %T$(tput sgr0)]: "
 
 # Prompt
-export PS1='\w $ '
+source ./prompt
 
 # Important path
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
