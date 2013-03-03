@@ -1,16 +1,16 @@
 alias tm='mate .'
 
-# Rails 3.x
+# Ruby
 alias rc="rails console"
 alias rs="rails server"
 alias rg="rails generate"
 alias rd="rails destroy"
 alias be="bundle exec"
+alias z="zeus"
 
 # General
 alias ls="ls -laGh"
 alias ll=ls
-
 
 # Git
 alias g="git"
