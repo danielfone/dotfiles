@@ -13,6 +13,7 @@ alias ls="ls -laGh"
 alias ll=ls
 
 # Git
+alias git=hub
 alias g="git"
 alias gs="git status"
 alias gc="git checkout"
