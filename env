@@ -13,7 +13,7 @@ export HISTTIMEFORMAT="[$(tput setaf 2)%F %T$(tput sgr0)]: "
 source ./prompt
 
 # Important path
-export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:~/Dotfiles/bin:$PATH"
 
 # Ruby
 export RUBY_HEAP_MIN_SLOTS=1000000

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+RUBY='@author = true if $_ =~ /<author>/
+      @author = false if $_ =~ %r{</author>}
+      next unless @author and ($_ =~ %r{<name>(.*)</name>})
+      puts $1'
+URL="https://mail.google.com/mail/feed/atom"
+ACCOUNT='daniel@fone.net.nz'
+PASSWORD=`security find-internet-password -a $ACCOUNT -s 'imap.gmail.com' -w`
+
+curl -u "$ACCOUNT:$PASSWORD" --silent $URL | ruby -ne "$RUBY" | sort | uniq
