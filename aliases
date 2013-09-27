@@ -7,6 +7,10 @@ alias rg="rails generate"
 alias rd="rails destroy"
 alias be="bundle exec"
 alias z="zeus"
+function rnp(){
+  gem update rails
+  rails new $@ -T -d postgresql -m ~/Development/rails-templates/default-production.rb
+}
 
 # General
 alias ls="ls -laGh"
