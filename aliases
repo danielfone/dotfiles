@@ -1,24 +1,5 @@
 alias tm='mate .'
 
-# Ruby
-alias rc="rails console"
-alias rs="rails server"
-alias rg="rails generate"
-alias rd="rails destroy"
-alias be="bundle exec"
-alias z="zeus"
-function rnp(){
-  gem update rails
-  rails new $@ -T -d postgresql -m ~/Development/rails-templates/default-production.rb
-}
-
 # General
 alias ls="ls -laGh"
 alias ll=ls
-
-# Git
-alias git=hub
-alias g="git"
-alias gs="git status"
-alias gc="git checkout"
-alias gd="git diff"

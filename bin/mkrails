@@ -1,0 +1,43 @@
+#!/bin/bash
+
+set -o nounset
+set -o errexit
+
+if [[ $# -lt 3 ]]; then
+  echo "USAGE: $0 TYPE CLIENT APP_NAME"
+  exit -1
+fi
+
+function quiet {
+  echo -e "\x1B[37m$@\x1B[0m"
+}
+
+function loud {
+  echo -e "\x1B[1;34m$@\x1B[0m"
+}
+
+APP_TYPE=$1
+APP_CLIENT=$2
+APP_NAME=$3
+
+loud "Making $APP_TYPE version of $APP_NAME for $APP_CLIENT"
+echo
+
+quiet "Updating rails..."
+#gem update rails
+
+TEMPLATE="~/Development/rails-templates/default-$APP_TYPE.rb"
+
+quiet "Generating rails application..."
+rails new $APP_NAME -T -d postgresql -m $TEMPLATE
+
+cd $APP_NAME
+
+quiet "Updating Heroku client..."
+heroku update
+quiet "Creating Heroku app..."
+heroku create $APP_CLIENT-$APP_TYPE-$APP_NAME
+quiet "Pushing app to Heroku"
+git push heroku master
+quiet "Setting up Heroku db..."
+heroku run rake db:migrate
