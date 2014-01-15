@@ -24,7 +24,7 @@ loud "Making $APP_TYPE version of $APP_NAME for $APP_CLIENT"
 echo
 
 quiet "Updating rails..."
-#gem update rails
+gem update rails
 
 TEMPLATE="~/Development/rails-templates/default-$APP_TYPE.rb"
 
