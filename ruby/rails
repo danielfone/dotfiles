@@ -1,10 +1,4 @@
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-
-chruby ruby
-
-# added by travis gem
-source /Users/danielfone/.travis/travis.sh
+#!/bin/bash
 
 # Ruby
 alias rc="rails console"
@@ -20,3 +14,4 @@ function mkscaffold {
   rails generate bootstrap:themed $1
   rm app/assets/stylesheets/scaffolds.css.scss
 }
+

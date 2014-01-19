@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source ./chruby
+source ./rails
+source ./rails_bricks
